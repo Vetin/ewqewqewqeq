@@ -1,0 +1,11 @@
+<div id="A">
+  <div id="B">
+    <div id="C">Click Here</div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('div').forEach((e) => {
+    e.onclick = (e) => console.log(e.currentTarget.id);
+  });
+</script>
