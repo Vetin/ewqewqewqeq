@@ -86,7 +86,7 @@ module.exports = {
     },
     {
       files: ['*.js'],
-      parser: 'eslint/parser',
+      parser: 'eslint',
     },
   ],
   settings: {

@@ -1,6 +1,6 @@
 {
   "*.{ts,tsx,js}": [
     "prettier --write",
-    "eslint --fix --no-cache"
+    "eslint --fix"
   ]
 }
