@@ -1,12 +1,16 @@
-import { router } from '@features/router';
+import { Provider as ReduxProvider } from 'react-redux';
 
-import { Pages } from '@pages/index';
-import { routes } from '@pages/routes';
+import { appStore } from '@entities/app-store';
 
-import './styles/global.css';
-
-router.addRoutes(routes);
+import { Pages } from './pages';
+import styles from './style.css';
 
 export const App = () => {
-  return <Pages router={router} />;
+  return (
+    <ReduxProvider store={appStore}>
+      <div className={styles.app}>
+        <Pages />
+      </div>
+    </ReduxProvider>
+  );
 };

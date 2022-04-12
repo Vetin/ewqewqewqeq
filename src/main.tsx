@@ -1,12 +1,13 @@
-import { allSettled, fork } from 'effector';
 import { render } from 'react-dom';
+import { App } from './app';
 
-import { App } from '@app/index';
+const root = document.getElementById('root');
 
-import { appStarted } from '@features/app-started';
+render(<App />, root);
 
-const scope = fork();
+// redux - global
+// local - react-query
 
-allSettled(appStarted, { scope }).then(() => {
-  render(<App />, document.getElementById('root'));
-});
+// rtk/query
+
+// toolkit without hooks

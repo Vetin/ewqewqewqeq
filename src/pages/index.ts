@@ -1,7 +1,15 @@
-import { type Router } from '@shared/libs/router';
-import { renderRoutes } from '@shared/libs/router/react';
+import { RouteConfig } from 'react-router-config';
+import { Home } from './home';
+import { LoginPage } from './login';
+import { paths } from './paths';
 
-import { Error404 } from './error-404';
-
-export const Pages = ({ router }: { router: Router }) =>
-  renderRoutes({ router, NotFound: Error404 });
+export const routes: RouteConfig['routes'] = [
+  {
+    path: paths.home(),
+    component: Home,
+  },
+  {
+    path: paths.login(),
+    component: LoginPage,
+  },
+];
