@@ -3,6 +3,8 @@ import { Home } from './home';
 import { LoginPage } from './login';
 import { paths } from './paths';
 
+const DEAD_CODE = 2;
+
 export const routes: RouteConfig['routes'] = [
   {
     path: paths.home(),
@@ -13,3 +15,5 @@ export const routes: RouteConfig['routes'] = [
     component: LoginPage,
   },
 ];
+
+console.log(DEAD_CODE);
